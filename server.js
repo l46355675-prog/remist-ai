@@ -1,10 +1,12 @@
 import express from "express";
 import fetch from "node-fetch";
 import cors from "cors";
-
+import path from "path";
 const app = express();
 app.use(cors());
 app.use(express.json());
+
+app.use(express.static(path.join(process.cwd(), "public")));
 
 const HF_API_KEY = process.env.HF_API_KEY;
 
@@ -54,3 +56,4 @@ app.post("/suggest", async (req, res) => {
 });
 
 app.listen(3000, () => console.log("🤖 AI backend running"));
+
