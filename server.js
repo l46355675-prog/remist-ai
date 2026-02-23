@@ -6,7 +6,9 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-app.use(express.static(path.join(process.cwd(), "public")));
+app.get("/", (req, res) => {
+  res.sendFile(path.join(process.cwd(), "routine.html"));
+});
 
 const HF_API_KEY = process.env.HF_API_KEY;
 
@@ -56,4 +58,5 @@ app.post("/suggest", async (req, res) => {
 });
 
 app.listen(3000, () => console.log("🤖 AI backend running"));
+
 
