@@ -1,0 +1,70 @@
+* {
+    background-color: var(--bg-color);
+}
+
+.title {
+    color: var(--button-color);
+    text-align: center;
+    font-family: sans-serif;
+}
+
+.week {
+    color: var(--button-color);
+    font-family: sans-serif;
+    padding: 5px;
+}
+
+#weekly-review {
+    padding: 10px;
+    list-style: none;
+    color: var(--button-color);
+    font-family: sans-serif   ;
+}
+
+#delete {
+    background-color: var(--button-color);
+    border-radius: 5px;
+    font-family: sans-serif;
+    border: 2px solid var(--border-color);
+    height: 30px;
+    position: absolute;
+    top: 10px;
+    left: 1300px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+#counter {
+    position: absolute;
+    bottom: 80px;
+    left: 650px;
+    color: var(--text-color);
+    font-family: sans-serif;
+}
+
+    .go-back {
+        background: none;
+        border: none;
+        padding: 0;
+        cursor: pointer;
+        color: var(--button-color);
+        float: left;
+        position: relative;
+        left: 10px;
+
+
+    }
+
+    .go-back span {
+        font-size: 30px;
+        color: var(--button-color);
+        
+    }
+
+    .go-back,
+    .go-back:visited,
+    .go-back:hover,
+    .go-back:active {
+    color: var(--button-color);
+    text-decoration: none;
+    }

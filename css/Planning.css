@@ -1,0 +1,115 @@
+* {
+    background-color: var(--bg-color);
+}
+.profile {
+    float: right;
+    border: none;
+    cursor: pointer;
+    color: var(--button-color);
+}
+
+.setting {
+    float: right;
+    border: none;
+    cursor: pointer;
+    color: var(--button-color);
+}
+
+.history {
+    float: left;
+    border: none;
+    cursor: pointer;
+    color: var(--button-color);
+}
+
+.prodtools {
+    text-align: center;
+    position: relative;
+    top: 290px;
+    
+}
+
+.prodtools button {
+    position: relative;
+    margin: 20px;
+    background-color: var(--button-color);
+    border: 2px solid var(--border-color);
+    border-radius: 5px;
+    height: 40px;
+    width: 100px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: medium;
+    cursor: pointer;
+}
+
+.dumb {
+    width: 80%;
+    max-width: 300px;
+    position: relative;
+    margin: 20px auto;
+    display: block;
+    top: 400px;
+    height: 30px;
+    border: 2px solid var(--border-color);
+    border-radius: 5px;
+    background-color: var(--button-color);
+}
+
+.dumb::placeholder {
+    color: var(--text-color);
+    padding: 5px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+.home {
+    position: relative;
+    display: block;
+    margin: 10px auto;   
+    top: 450px;          
+    background-color: var(--button-color);
+    border: 2px solid var(--border-color);
+    border-radius: 5px;
+    height: 40px;
+    width: 120px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: medium;
+    cursor: pointer;
+}
+
+.savedumb {
+    background-color: var(--button-color);
+    position: absolute;
+    left: 75%;
+    height: 500px;
+    width: 350px;
+    border: 2px solid var(--border-color);
+    border-radius: 5px;
+    overflow: auto;
+}
+
+.savedumb::-webkit-scrollbar{
+    height: 0px;
+    width: 0px;
+}
+
+.notetitle {
+    position: absolute;
+    left: 76%;
+    bottom: 73%;
+    color: var(--button-color);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bolder;
+}
+
+#addNoteBtn {
+    position: absolute;
+    left: 60%;
+    top: 66%;
+    padding: 5px;
+    margin: 1px;
+    border: 2px solid var(--border-color);
+    border-radius: 5px;
+    background-color: var(--button-color);
+    cursor: pointer;
+}

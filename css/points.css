@@ -1,0 +1,235 @@
+* {
+    background-color: var(--bg-color);
+}
+
+ .pagename {
+        color: var(--button-color);
+        text-align: center;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+
+    .go-back {
+        background: none;
+        border: none;
+        padding: 0;
+        cursor: pointer;
+        color: var(--button-color);
+        float: left;
+        position: relative;
+        left: 10px;
+
+
+    }
+
+    .go-back span {
+        font-size: 30px;
+        color: var(--button-color);
+        
+    }
+
+    .go-back,
+    .go-back:visited,
+    .go-back:hover,
+    .go-back:active {
+    color: var(--button-color);
+    text-decoration: none;
+    }
+
+.container {
+    width: 500px;
+    height: 400px;
+    background-color: var(--button-color);
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid var(--border-color);
+    border-radius: 15px;
+    margin: 5px;
+}
+
+
+.unlockednotis {
+    width: 500px;
+    height: 70px;
+    background-color: var(--button-color);
+    border: 2px solid var(--border-color);
+    border-radius: 15px;
+    position: relative;
+    top: 550px;
+    left: 500px;
+}
+
+.unlockednotis .unlocksect {
+    position: relative;
+    bottom: 50px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: var(--button-color);
+    font-size: large;
+    font-weight: bold;
+}
+
+.points {
+    position: absolute;
+    left: 650px;
+    color: var(--button-color);
+    flex-direction: column;
+    display: inline;
+    text-align: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: larger;
+    font-weight: bold;
+}   
+
+.points span {
+    display: inline;
+    flex-direction: column;
+    margin: 10px;
+}
+
+.circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  background-color: var(--button-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  border: 2px solid black;
+  position: relative;
+  top: 10px;
+  left: 10px;
+}
+.circle audio {
+  width: 60px;
+  height: 25px;
+}
+
+.circle span {
+    background-color: var(--button-color);
+}
+
+.freenoti {
+    position: relative;
+    bottom: 50px;
+    left: 80px;
+    background-color: var(--button-color);
+    width: 100px;
+    margin: 10px;
+}
+
+.freenoti button {
+    height: 40px;
+    background-color: var(--button-color);
+    border: 2px solid var(--border-color);
+    border-radius: 5px;
+}
+
+.paidnoti {
+    position: relative;
+    bottom: 60px;
+    left: 70px;
+    background-color: var(--button-color);
+    width: 200px;
+    margin: 10px;
+}
+
+.paidnoti   button {
+    height: 70px;
+    background-color: var(--button-color);
+    border: 2px solid var(--border-color);
+    border-radius: 5px;
+}
+
+.circle1 {
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  background-color:  var(--button-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  border: 2px solid black;
+  position: relative;
+  bottom: 420px;
+  left: 250px;
+}
+.circle1 audio {
+  width: 60px;
+  height: 25px;
+}
+
+.circle1 span {
+    background-color: var(--button-color);
+}
+.paidnoti1 {
+    position: relative;
+    bottom: 490px;
+    left: 320px;
+    background-color: var(--button-color);
+    width: 150px;
+    margin: 10px;
+}
+
+.paidnoti1   button {
+    height: 70px;
+    background-color: var(--button-color);
+    border: 2px solid var(--border-color);
+    border-radius: 5px;
+}
+
+.container1 {
+    width: 300px;
+    height: 500px;
+    position: relative;
+    top: 80px;
+    right: 50px;
+    padding-right: 5px;
+    background-color: var(--button-color);
+    float: right;
+}
+
+.container1 p {
+    text-align: center;
+    background-color: var(--button-color);
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+}
+
+li {
+    text-align: center;
+    background-color: var(--button-color);
+    position: relative;
+    top: 60px;
+    color: var(--text-color);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+}
+
+ul {
+    list-style-type: none;
+    background-color: var(--button-color);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+
+}
+
+.container > .circle:first-of-type {
+    opacity: 1;
+    pointer-events: auto;
+    cursor: pointer;
+}
+.unlockednotis {
+   overflow: auto;
+   box-sizing: border-box;
+}
+
+.unlockednotis::-webkit-scrollbar {
+    overflow: hidden;
+}
+

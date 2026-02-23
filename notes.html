@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link rel="shortcut icon" href="images/remist.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="css/notes.css">
+    <title>Remist</title>
+</head>
+<body>
+     <button class="go-back"><a href="Planning.html"><span class="material-symbols-outlined" id="goback">keyboard_arrow_left</span></a></button>
+    <h2 class="title">Categorical notes</h2>
+    <p id="no-notes">No category found Add category</p>
+    <button id="addBtn">Add a category</button>
+    <div id="catcontainer"></div>
+    <div id="notes-container"></div>
+</body>
+<script type="module" src="JS/theme.js"></script>
+<script type="module" src="JS/Database/firebase.js"></script>
+<script type="module" src="JS/categoryadd.js"></script>
+</html>

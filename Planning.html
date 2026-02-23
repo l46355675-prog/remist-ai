@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="css//Planning.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <title>Remist</title>
+    <link rel="shortcut icon" href="images/remist.png" type="image/x-icon">
+
+</head>
+<body>
+    <button class="profile" onclick="window.location.href='profile.html'"><span class="material-symbols-outlined">account_circle</span></button>
+    <button class="setting" onclick="window.location.href='settings.html'"><span class="material-symbols-outlined">settings</span></button>
+    <button class="history"><span class="material-symbols-outlined" onclick="window.location.href='history.html'">history</span></button>
+    <div class="prodtools">
+        <button class="planner" id="plan" onclick="window.location.href='planner.html'">Planner</button>
+        <button class="notes" id="note" onclick="window.location.href='notes.html'">Notes</button>
+        <button class="reminders" id="remind" onclick="window.location.href='Reminder.html'">Reminders</button>
+        <button class="routines" id="routine" onclick="window.location.href='routine.html'">Routines</button>
+        
+    </div>
+    <input type="text" class="dumb" id="dumbnotes" placeholder="Write anything here...">
+    <button id="addNoteBtn">Add Note</button>
+    <button class="home" id="home" onclick="window.location.href='main.html'">Home</button>
+    <div id="savedumb" class="savedumb"></div>
+
+    <p class="notetitle">Saved dumb notes</p>
+</body>
+<script type="module" src="JS/theme.js"></script>
+    <script type="module" src="JS/savenotes.js"></script>
+</html>

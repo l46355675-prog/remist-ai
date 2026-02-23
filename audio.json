@@ -1,0 +1,32 @@
+[
+    {
+        "name": "skull",
+        "file": "Sounds/Heyy.wav",
+        "category": "free"
+    }, 
+    {
+        "name": "rocket",
+        "file": "Sounds/no-luck-too-bad-disappointing-sound-effect-112943.mp3",
+        "category": "paid"
+    }, 
+    {
+        "name": "sentiment_extremely_dissatisfied",
+        "file": "Sounds/Do it.mp3",
+        "category": "paid"
+    }, 
+    {
+        "name": "robot",
+        "file": "Sounds/letsgetiton.mp3", 
+        "category": "paid"
+    }, 
+    {
+        "name": "sentiment_very_dissatisfied",
+        "file": "Sounds/sound-effects-man-screaming-01-247131.mp3",
+        "category": "paid"
+    }, 
+    {
+        "name": "sentiment_frustrated",
+        "file": "Sounds/torvosaurus-roar-416274.mp3",
+        "category": "paid"
+    }
+]

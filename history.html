@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/theme.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link rel="stylesheet" href="css/history.css">
+    <link rel="shortcut icon" href="images/remist.png" type="image/x-icon">
+    <title>Remist</title>
+</head>
+
+</div>
+<body>
+    <button class="go-back"><a href="Planning.html"><span class="material-symbols-outlined" id="goback">keyboard_arrow_left</span></a></button>
+    <h1 class="title" id="title">History</h1>
+    <h2 class="week">Weekly review:</h2>
+    <hr style="border: 1px solid black; width: 500px;">
+    <div id="weekly-review">
+    <ul class="weekly-tasks-list"></ul>
+    </div>
+    <button id="delete">Delete history</button>
+    <footer id="counter">Hard Task Count: <span id="hardtasks">0</span> Easy Task Count: <span id="easytasks">0</span> </footer>
+</body>
+<script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth-compat.js"></script>
+<script type="module" src="JS/theme.js"></script>
+<script type="module" src="JS/history.js"></script>
+</html>

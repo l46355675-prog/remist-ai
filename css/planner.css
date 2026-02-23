@@ -1,0 +1,55 @@
+* {
+    background-color: var(--bg-color);
+}
+
+.go-back {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    color: var(--button-color);
+    float: left;
+    position: relative;
+    left: 10px;
+
+}
+
+.go-back span {
+    font-size: 30px;
+    color: var(--button-color);
+    
+}
+
+.go-back,
+.go-back:visited,
+.go-back:hover,
+.go-back:active {
+  color: var(--button-color);
+  text-decoration: none;
+}
+
+.title {
+    color: var(--button-color);
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.daysOfWeek {
+    display: flex;
+    justify-content: flex-start;
+    gap: 15px; 
+    margin-left: 200px;
+    color: var(--text-color);
+    font-family: sans-serif;
+}
+
+.daysOfWeek span {
+    width: 150px; 
+    text-align: center;
+}
+
+textarea:hover {
+  border-color: var(--button-color);
+  box-shadow: 0 0 5px var(--border-color);
+}
+
+

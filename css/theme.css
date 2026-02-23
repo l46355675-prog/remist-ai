@@ -1,0 +1,13 @@
+:root {
+    --bg-color: #b7c9a9;
+    --button-color: #cb7a5c;
+    --border-color: black;
+    --text-color:var(--border-color) 
+}
+
+[data-theme="dark"] {
+    --bg-color: #121212;
+    --button-color: #4caf50;
+    --border-color: #ffffff;
+    --text-color: #ffffff;
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="css/Sign.css">
+    <link rel="shortcut icon" href="images/remist.png" type="image/x-icon">
+    <title>Remist</title>
+</head>
+<body>
+    <h1 class="remhead">Welcome to Remist</h1>
+    <form class="formtosign">
+        <input type="text" id="email" required placeholder="Type in a Email" >
+        <input type="text" id="username" required placeholder ="Type in a username" >
+        <input type="text" id="password" required placeholder="Type in a password" >
+        <input type="text" id="confirmpass" required placeholder="Retype your password" >
+        <label for="confirm" style="display: flex; align-items: center; gap: 8px;">
+        <input type="checkbox" id="confirm1" >
+        <span class="readyornot">I’m ready to create my Remist account.</span>
+        </label>
+        <label for="confirm" style="display: flex; align-items: center; gap: 8px;">
+        <input type="checkbox" id="confirm2" >
+        <span class="readyornot">Keep me informed about Remist updates</span>
+        </label>
+        <button class="button" id="signin">Sign in</button>
+
+
+        <div class="makeaccount">
+            <p>Have an account?<a href="Login.html">Login in</a></p>
+        </div>
+    </form>
+      <!-- Firebase SDK scripts: add before your own script -->
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth-compat.js"></script>
+    <script type="module" src="JS/signinlogic.js"></script>
+</body>
+<script type="module" src="JS/theme.js"></script>
+</html>

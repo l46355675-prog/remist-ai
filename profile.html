@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="css/profile.css">
+    <link rel="shortcut icon" href="images/remist.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <title>Remist</title>
+</head>
+<body>
+    <header>
+        <button class="go-back"><a href="Planning.html"><span class="material-symbols-outlined" id="goback">keyboard_arrow_left</span></a></button>
+        <h1 id="username">Hello <span id="userName"></span></h1>
+    </header>
+    <div class="accountdetail">
+        <h2 class="info">Profile informamtion:</h2>
+        <p><strong>Email:</strong><span id="user-email"></span></p>
+        <p><strong>Points Recieved:</strong><span id="user-points"></span></p>
+        <p><strong>How many times user Entered Remist:</strong><span id="user-count"></span></p>
+        <p><strong>User joined on:</strong><span id="join-date"></span></p>
+    </div>
+    <p class="loyalty">Loyalty to Remist</p>
+    <div class="loyalty-bar">
+        <div class="loyaltyfill" id="loyaltyfill"></div>
+    </div>
+    <p id="loyalty-percent">0%</p>
+</body>
+<script type="module" src="JS/theme.js"></script>
+<script src="JS/profile.js"></script>
+</html>
