@@ -3,7 +3,9 @@ import fetch from "node-fetch";
 import cors from "cors";
 import path from "path";
 const app = express();
-app.use(cors());
+app.use(cors({
+  origin: "https://remist.net"  // Hostinger main site
+}));
 app.use(express.json());
 
 app.get("/", (req, res) => {
@@ -58,5 +60,6 @@ app.post("/suggest", async (req, res) => {
 });
 
 app.listen(3000, () => console.log("🤖 AI backend running"));
+
 
 
