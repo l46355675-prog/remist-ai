@@ -59,10 +59,11 @@ getSuggestionBtn.addEventListener('click', async () => {
     `
 
     try {
-        const res = await fetch('http://localhost:3000/suggest', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ goal })
+        fetch("https://remist-ai.onrender.com/suggest", {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({ goal })
+})
         })
 
         const data = await res.json()
@@ -120,3 +121,4 @@ getSuggestionBtn.addEventListener('click', async () => {
         console.error(err)
     }
 })
+
