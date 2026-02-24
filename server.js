@@ -62,7 +62,9 @@ const json = JSON.parse(text);
   }
 });
 
-app.listen(3000, () => console.log("🤖 AI backend running"));
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => console.log(`🤖 AI backend running on port ${PORT}`));
+
 
 
 
