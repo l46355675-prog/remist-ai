@@ -35,6 +35,7 @@ getSuggestionBtn.style.position = 'absolute'
 getSuggestionBtn.style.top = '200px'
 getSuggestionBtn.style.left = '150px'
 getSuggestionBtn.style.cursor = "pointer"
+
 addSuggestionBox.appendChild(boxTitle)
 addSuggestionBox.appendChild(writeSuggestion)
 addSuggestionBox.appendChild(getSuggestionBtn)
@@ -49,9 +50,7 @@ getSuggestionBtn.addEventListener('click', async () => {
 
     addSuggestionBox.innerHTML = `
         <p class='botThink'>
-            Thinking 🤖...<br>
-            <br>
-            <br>
+            Thinking 🤖...<br><br>
             Turning your goal into actions…<br>
             Designing your routine…<br>
             Breaking this down step by step…
@@ -59,58 +58,69 @@ getSuggestionBtn.addEventListener('click', async () => {
     `
 
     try {
-        const res = fetch("https://remist-ai.onrender.com/suggest", {
-              method: "POST",
-              headers: { "Content-Type": "application/json" },
-              body: JSON.stringify({ goal })
-})
+        const res = await fetch("https://remist-ai.onrender.com/suggest", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ goal })
         })
+
+        if (!res.ok) {
+            throw new Error("Server error")
+        }
 
         const data = await res.json()
 
         if (data.error) {
             addSuggestionBox.innerHTML = `
-                <p style="color:red;text-align:center;">Error: ${data.error}</p>
-            `
-        } else {
-            const cleaned = data.suggestion.map(item => 
-                item.replace(/[—–,!.?…]/g, '')   // remove punctuation
-                    .replace(/\*\*/g, '')        // remove **
-                    .replace(/[0-9]+,/g, '')     // remove weird numbers like 1,0
-                    .trim()
-            )
-            addSuggestionBox.innerHTML = `
-                <p style="
-                    background:none;
-                    color:var(--text-color);
-                    padding: 5px;
-                    font-family:Arial, Helvetica, sans-serif;
-                    text-align:center;
-                    margin-top:20px;  
-                ">
-                    ${cleaned.join('<br>')}
+                <p style="color:red;text-align:center;">
+                    Error: ${data.error}
                 </p>
             `
-            const anotherSuggestion = document.createElement('button')
-            anotherSuggestion.textContent = 'Another goal'
-            anotherSuggestion.style.backgroundColor = 'var(--button-color)'
-            anotherSuggestion.style.position = 'absolute'
-            anotherSuggestion.style.left = '20px'
-            anotherSuggestion.style.color = 'var(--text-color)'
-            anotherSuggestion.style.width = '200px'
-            anotherSuggestion.style.height = '50px'
-            anotherSuggestion.style.border = '2px solid var(--border-color)'
-            anotherSuggestion.style.borderRadius = '5px'
-            anotherSuggestion.style.cursor = "pointer"
-            anotherSuggestion.addEventListener('click', () => {
-                addSuggestionBox.innerHTML = ''
-                addSuggestionBox.appendChild(boxTitle)
-                addSuggestionBox.appendChild(writeSuggestion)
-                addSuggestionBox.appendChild(getSuggestionBtn)
-                writeSuggestion.value = ''
-            })
-            addSuggestionBox.appendChild(anotherSuggestion)
+            return
         }
+
+        const cleaned = data.suggestion.map(item =>
+            item
+                .replace(/[—–,!.?…]/g, '')
+                .replace(/\*\*/g, '')
+                .replace(/[0-9]+,/g, '')
+                .trim()
+        )
+
+        addSuggestionBox.innerHTML = `
+            <p style="
+                background:none;
+                color:var(--text-color);
+                padding: 5px;
+                font-family:Arial, Helvetica, sans-serif;
+                text-align:center;
+                margin-top:20px;
+            ">
+                ${cleaned.join('<br>')}
+            </p>
+        `
+
+        const anotherSuggestion = document.createElement('button')
+        anotherSuggestion.textContent = 'Another goal'
+        anotherSuggestion.style.backgroundColor = 'var(--button-color)'
+        anotherSuggestion.style.position = 'absolute'
+        anotherSuggestion.style.left = '20px'
+        anotherSuggestion.style.color = 'var(--text-color)'
+        anotherSuggestion.style.width = '200px'
+        anotherSuggestion.style.height = '50px'
+        anotherSuggestion.style.border = '2px solid var(--border-color)'
+        anotherSuggestion.style.borderRadius = '5px'
+        anotherSuggestion.style.cursor = "pointer"
+
+        anotherSuggestion.addEventListener('click', () => {
+            addSuggestionBox.innerHTML = ''
+            addSuggestionBox.appendChild(boxTitle)
+            addSuggestionBox.appendChild(writeSuggestion)
+            addSuggestionBox.appendChild(getSuggestionBtn)
+            writeSuggestion.value = ''
+        })
+
+        addSuggestionBox.appendChild(anotherSuggestion)
 
     } catch (err) {
         addSuggestionBox.innerHTML = `
@@ -118,7 +128,6 @@ getSuggestionBtn.addEventListener('click', async () => {
                 Something went wrong. Try again.
             </p>
         `
-        console.error(err)
+        console.error("Fetch error:", err)
     }
 })
-
