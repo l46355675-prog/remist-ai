@@ -43,7 +43,10 @@ app.post("/suggest", async (req, res) => {
       }
     );
 
-    const json = await hfResponse.json();
+    const text = await hfResponse.text();
+console.log("HF RAW RESPONSE:", text);
+
+const json = JSON.parse(text);
 
     if (!json.choices || !json.choices[0]?.message?.content) {
       return res.status(500).json({ error: "No suggestion generated" });
@@ -60,6 +63,7 @@ app.post("/suggest", async (req, res) => {
 });
 
 app.listen(3000, () => console.log("🤖 AI backend running"));
+
 
 
 
